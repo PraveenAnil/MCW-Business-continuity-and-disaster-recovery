@@ -43,7 +43,7 @@
     "BCDRDC1ImageOffer": "WindowsServer",
     "BCDRDC1WindowsOSVersion": "2016-Datacenter",
     "BCDRDC1OSDiskName": "BCDRDC1OSDisk",
-    "BCDRDC1VmSize": "Standard_F2s",
+    "BCDRDC1VmSize": "Standard_F4s",
     "BCDRDC1VnetID": "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRVNetName'))]",
     "BCDRDC1SubnetRef": "[concat(variables('BCDRDC1VnetID'), '/subnets/', variables('BCDRVNetSubnet4Name'))]",
     "BCDRDC1NicName": "[concat(variables('BCDRDC1Name'), '-NIC')]",
@@ -57,7 +57,7 @@
     "SQLVM1ImageOffer": "SQL2017-WS2016",
     "SQLVM1WindowsOSVersion": "SQLDEV",
     "SQLVM1OSDiskName": "SQLVM1OSDisk",
-    "SQLVM1VmSize": "Standard_F2s",
+    "SQLVM1VmSize": "Standard_F4s",
     "SQLVM1VnetID": "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRVNetName'))]",
     "SQLVM1SubnetRef": "[concat(variables('SQLVM1VnetID'), '/subnets/', variables('BCDRVNetSubnet3Name'))]",
     "SQLVM1PubIPName": "[concat(variables('SQLVM1Name'), '-IP')]",
@@ -69,7 +69,7 @@
     "SQLVM2ImageOffer": "SQL2017-WS2016",
     "SQLVM2WindowsOSVersion": "SQLDEV",
     "SQLVM2OSDiskName": "SQLVM2OSDisk",
-    "SQLVM2VmSize": "Standard_F2s",
+    "SQLVM2VmSize": "Standard_F4s",
     "SQLVM2VnetID": "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRVNetName'))]",
     "SQLVM2SubnetRef": "[concat(variables('SQLVM2VnetID'), '/subnets/', variables('BCDRVNetSubnet3Name'))]",
     "SQLVM2PubIPName": "[concat(variables('SQLVM2Name'), '-IP')]",
@@ -81,7 +81,7 @@
     "WEBVM1ImageOffer": "WindowsServer",
     "WEBVM1WindowsOSVersion": "2016-Datacenter",
     "WEBVM1OSDiskName": "WEBVM1OSDisk",
-    "WEBVM1VmSize": "Standard_F2s",
+    "WEBVM1VmSize": "Standard_F4s",
     "WEBVM1VnetID": "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRVNetName'))]",
     "WEBVM1SubnetRef": "[concat(variables('WEBVM1VnetID'), '/subnets/', variables('BCDRVNetSubnet2Name'))]",
     "WEBVM1StorageAccountContainerName": "vhds",
@@ -93,7 +93,7 @@
     "WEBVM2ImageOffer": "WindowsServer",
     "WEBVM2WindowsOSVersion": "2016-Datacenter",
     "WEBVM2OSDiskName": "WEBVM2OSDisk",
-    "WEBVM2VmSize": "Standard_F2s",
+    "WEBVM2VmSize": "Standard_F4s",
     "WEBVM2VnetID": "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRVNetName'))]",
     "WEBVM2SubnetRef": "[concat(variables('WEBVM2VnetID'), '/subnets/', variables('BCDRVNetSubnet2Name'))]",
     "WEBVM2StorageAccountContainerName": "vhds",
@@ -1318,7 +1318,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[variables('BCDRIaaSSecondarySiteTemplateURL')]",
+          "uri": "https://raw.githubusercontent.com/PraveenAnil/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/NestedDeployments/BCDRIaaSSecondarySite.json",
           "contentVersion": "1.0.0.0"
         }
       }
